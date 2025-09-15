@@ -92,7 +92,7 @@
 
         .nav-logo {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2.2rem; /* <-- INCREASED FONT SIZE */
             font-weight: 700;
             color: var(--primary-color);
             text-decoration: none;
@@ -227,6 +227,11 @@
         .service-content h3 {
              margin-top: 0;
         }
+        .service-content ul {
+            list-style-position: outside;
+            padding-left: 1.2rem;
+        }
+        .service-content ul li { margin-bottom: 0.5rem; }
 
         .btn-secondary {
             background-image: linear-gradient(45deg, var(--dark-accent), #34495E);
@@ -355,6 +360,8 @@
             overflow: hidden;
             box-shadow: 0 5px 20px var(--light-shadow);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
         .event-card:hover {
             transform: translateY(-8px);
@@ -367,6 +374,7 @@
         }
         .event-card-content {
             padding: 1.5rem;
+            flex-grow: 1;
         }
 
 
@@ -376,6 +384,7 @@
             h2 { font-size: 2.2rem; }
             .hero-content { max-width: 100%; text-align: center; }
             .navbar { flex-direction: column; }
+            .nav-logo { font-size: 2rem; }
             .nav-links { margin-top: 1rem; }
             .nav-links li { margin: 0 1rem; }
             section { padding: 4rem 0; }
@@ -423,18 +432,8 @@
                         <button class="btn btn-secondary" id="viewProjectsBtn">View Projects</button>
                     </div>
                 </div>
-
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48 0a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
-                    </div>
-                    <div class="service-content">
-                        <h3>PR & Media</h3>
-                        <p>Our PR strategies build brand credibility and secure high-impact media coverage. We craft stories that journalists and audiences want to share. (See the Vaaree campaign in our projects!)</p>
-                    </div>
-                </div>
                 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                      <div class="service-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                     </div>
@@ -445,13 +444,40 @@
                     </div>
                 </div>
 
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                     <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48 0a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>PR & Media</h3>
+                        <p>Our PR strategies build brand credibility and secure high-impact media coverage. We craft stories that journalists and audiences want to share.</p>
+                        <h4>Featured Campaign: Vaaree</h4>
+                        <ul>
+                            <li><strong>Objective:</strong> To create festive buzz and strengthen Vaaree’s positioning as a premium home & lifestyle brand through celebrity engagement.</li>
+                            <li><strong>Approach:</strong>
+                                <ul>
+                                    <li>Curated luxury hampers showcasing Vaaree’s products.</li>
+                                    <li>Sent hampers to a handpicked list of celebrities and influential personalities.</li>
+                                    <li>Encouraged organic social media posts from recipients.</li>
+                                    <li>Focused on driving aspirational value and brand association.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                      <div class="service-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
                     </div>
                     <div class="service-content">
                         <h3>Brand Strategy</h3>
-                        <p>We develop data-driven strategies that define your market position, clarify your message, and create a roadmap for sustainable growth. (See our Social Dukan project!)</p>
+                        <p>We develop data-driven strategies that define your market position, clarify your message, and create a roadmap for sustainable growth.</p>
+                        <h4>Featured Project: Social Dukan</h4>
+                        <ul>
+                           <li>Facilitated brand sponsorships for college fests by bridging partnerships between colleges and brands.</li>
+                           <li>Analyzed campaign performance and optimized conversion strategies using data-driven insights.</li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -461,7 +487,13 @@
                     </div>
                     <div class="service-content">
                         <h3>Performance / Affiliate</h3>
-                        <p>We engineer high-ROI performance marketing that drives conversions and scales revenue, turning clicks into customers for brands like Flipkart.</p>
+                        <p>We engineer high-ROI performance marketing that drives conversions and scales revenue through strategic, data-backed campaigns.</p>
+                        <h4>Featured Partner: Flipkart</h4>
+                        <ul>
+                           <li>Drove revenue of <strong>₹12CR MoM</strong> through strategic affiliate campaigns for Viral Videshi & Grand Shopsy Mela.</li>
+                           <li>Analyzed campaign performance for "Dil se Desi Sale" & "End of Season Sale" and optimized conversion strategies using data-driven insights.</li>
+                           <li>Scaled content commerce initiatives by launching high-ROI social campaigns like "Super Saver Sale" & "Bharat Bazaar" via influencer activations.</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -575,6 +607,26 @@
                         <div class="event-card-content">
                             <h4>Bastian – Netflix & Thrill Party</h4>
                             <p>Partnered to host an exclusive party, creating significant digital visibility and offline buzz that reinforced Bastian’s premium positioning.</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop" alt="High-energy nightlife">
+                        <div class="event-card-content">
+                            <h4>One8 Commune</h4>
+                            <p>Created a high-energy nightlife experience that drives buzz, social amplification, and exclusivity through curated hosting and influencer engagement.</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="https://images.unsplash.com/photo-1643217991313-7360057248a8?q=80&w=1974&auto=format&fit=crop" alt="Authentic Indian Street Food">
+                        <div class="event-card-content">
+                            <h4>Imlee</h4>
+                            <p>Generated authentic buzz and drove footfall by curating an exclusive influencer dining experience.</p>
+                            <p style="margin-top:1rem;"><strong>Execution:</strong></p>
+                            <ul>
+                               <li>Hosted a curated influencer table.</li>
+                               <li>Content created via reels, stories, and posts.</li>
+                               <li>Organic amplification through reviews.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
