@@ -91,12 +91,19 @@
         }
 
         .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Controls space between logo and text */
             font-family: 'Poppins', sans-serif;
-            font-size: 2.2rem; /* <-- INCREASED FONT SIZE */
+            font-size: 2.2rem; 
             font-weight: 700;
             color: var(--primary-color);
             text-decoration: none;
             transition: transform 0.3s ease;
+        }
+
+        .nav-logo img {
+            height: 45px; /* Adjust this value to change your logo's size */
         }
         .nav-logo:hover {
             transform: scale(1.05);
@@ -398,7 +405,9 @@
 
     <header class="header" id="header">
         <nav class="navbar container">
-            <a href="#" class="nav-logo">BrandElevate</a>
+            <a href="#" class="nav-logo">
+                <img src="images/logo.png" alt="BrandElevate Icon"> BrandElevate
+            </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#footer">Contact</a></li>
